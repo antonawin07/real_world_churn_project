@@ -18,18 +18,27 @@ Today, I started by creating the project folder and downloading the dataset.
 -Rows: 7,043
 -Description: Includes customer demographics, account information, and whether they churned or not.
 
----
 
 Project Plan (upcoming)
 
 I'll build this project in parts across the next few days:
 
-- Day 2: Data cleaning, EDA, and feature engineering
+- Day 2: Data cleaning & EDA
+Today I focused on understanding the dataset and preparing it for model building. This meant looking at the data types, cleaning up messy columns, and exploring how churn is related to other variables.
+
+* Opened a new notebook: `churn_training.ipynb`
+* Loaded the dataset and checked its shape, data types, and null values
+* Cleaned the `TotalCharges` column and removed rows with missing data
+* Dropped the `customerID` column 
+* Explored churn trends using bar plots and box plots
+ * Churn vs Contract Type
+ * Churn vs Monthly Charges
+* Saved my progress and committed the notebook to GitHub
+
 - Day 3:Train logistic regression model and save it
 - Day 4: Simulate real-time batch input and generate predictions
 - Day 5: Build a dashboard using Streamlit to display churn risk
 
----
 
 Folder Structure (so far)
 
