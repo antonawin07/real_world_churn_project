@@ -26,14 +26,14 @@ I'll build this project in parts across the next few days:
 - Day 2: Data cleaning & EDA
 Today I focused on understanding the dataset and preparing it for model building. This meant looking at the data types, cleaning up messy columns, and exploring how churn is related to other variables.
 
-* Opened a new notebook: `churn_training.ipynb`
-* Loaded the dataset and checked its shape, data types, and null values
-* Cleaned the `TotalCharges` column and removed rows with missing data
-* Dropped the `customerID` column 
-* Explored churn trends using bar plots and box plots
- * Churn vs Contract Type
- * Churn vs Monthly Charges
-* Saved my progress and committed the notebook to GitHub
+- Opened a new notebook: `churn_training.ipynb`
+- Loaded the dataset and checked its shape, data types, and null values
+- Cleaned the `TotalCharges` column and removed rows with missing data
+- Dropped the `customerID` column 
+- Explored churn trends using bar plots and box plots
+- Churn vs Contract Type
+- Churn vs Monthly Charges
+- Saved my progress and committed the notebook to GitHub
 
 - Day 3:Train logistic regression model and save
  I focused on building the actual churn prediction model using the cleaned and encoded dataset. I used logistic regression since it's a good baseline for binary classification problems like churn (yes/no).
@@ -47,9 +47,39 @@ Today I focused on understanding the dataset and preparing it for model building
 - Committed both the notebook and model file to GitHub
 
  
-- Day 4: Simulate real-time batch input and generate predictions
-- Day 5: Build a dashboard using Streamlit to display churn risk
+- Day 4: Simulate real-time batch input and generate prediction
+Today I made the pipeline work like a real-time system using batch files.
+
+- Wrote `simulate_data.py` to generate batch files (10 customers at a time)
+- Wrote `predict_batches.py` to:
+- Read each batch
+- Load the trained model
+- Predict churn
+- Save results with a new column `PredictedChurn`
+- Saved outputs into a `predictions/` folder
+- Tested everything end-to-end
+- Committed the batch simulation + prediction logic to GitHub
+
+ Day 5 - Streamlit Dashboard
+To wrap the project professionally, I built a live dashboard to show results.
+
+- Created a dashboard using `Streamlit` in `dashboard.py`
+- The dashboard shows:
+- Latest prediction batch
+- Total records, churned customers, retained customers
+- A table and bar chart for easy viewing
+- Hosted the dashboard online using Streamlit Cloud
+- Final push to GitHub
+
+ Live Dashboard:
+[ View the Live Dashboard](https://antonawin07-streamlit-churn-dashboard.streamlit.app) ✅
+
+ Final Project Summary
+
+- Built a real ML pipeline with simulation, prediction, and dashboarding
+- Pushed all files to GitHub with daily progress
+  
 
 
-Folder Structure (so far)
+
 
