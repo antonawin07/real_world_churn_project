@@ -35,7 +35,18 @@ Today I focused on understanding the dataset and preparing it for model building
  * Churn vs Monthly Charges
 * Saved my progress and committed the notebook to GitHub
 
-- Day 3:Train logistic regression model and save it
+- Day 3:Train logistic regression model and save
+ I focused on building the actual churn prediction model using the cleaned and encoded dataset. I used logistic regression since it's a good baseline for binary classification problems like churn (yes/no).
+
+- Selected the features (`X`) and target variable (`y`)
+- Split the data into training and test sets
+- Handled class imbalance using SMOTE to upsample churn cases
+- Trained a logistic regression model using scikit-learn
+- Evaluated the model using accuracy and classification report (got around 86% accuracy)
+- Saved the trained model as `churn_model.pkl` using `joblib`
+- Committed both the notebook and model file to GitHub
+
+ 
 - Day 4: Simulate real-time batch input and generate predictions
 - Day 5: Build a dashboard using Streamlit to display churn risk
 
